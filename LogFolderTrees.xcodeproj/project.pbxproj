@@ -15,6 +15,13 @@
 		CF30D1D41EC174B30050FB53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30D1D21EC174B30050FB53 /* LaunchScreen.storyboard */; };
 		CF30D1DF1EC174B30050FB53 /* LogFolderTreesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30D1DE1EC174B30050FB53 /* LogFolderTreesTests.m */; };
 		CF30D1EA1EC174B30050FB53 /* LogFolderTreesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30D1E91EC174B30050FB53 /* LogFolderTreesUITests.m */; };
+		CF30D2031EC409C90050FB53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30D2021EC409C90050FB53 /* AppDelegate.m */; };
+		CF30D2061EC409C90050FB53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30D2051EC409C90050FB53 /* main.m */; };
+		CF30D2091EC409C90050FB53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30D2081EC409C90050FB53 /* ViewController.m */; };
+		CF30D20B1EC409C90050FB53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF30D20A1EC409C90050FB53 /* Assets.xcassets */; };
+		CF30D20E1EC409C90050FB53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30D20C1EC409C90050FB53 /* Main.storyboard */; };
+		CF30D2191EC409CA0050FB53 /* LogFolderTreesCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30D2181EC409CA0050FB53 /* LogFolderTreesCocoaTests.m */; };
+		CF30D2241EC409CA0050FB53 /* LogFolderTreesCocoaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF30D2231EC409CA0050FB53 /* LogFolderTreesCocoaUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +38,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = CF30D1C01EC174B30050FB53;
 			remoteInfo = LogFolderTrees;
+		};
+		CF30D2151EC409CA0050FB53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF30D1B91EC174B30050FB53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF30D1FE1EC409C90050FB53;
+			remoteInfo = LogFolderTreesCocoa;
+		};
+		CF30D2201EC409CA0050FB53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF30D1B91EC174B30050FB53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF30D1FE1EC409C90050FB53;
+			remoteInfo = LogFolderTreesCocoa;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +72,21 @@
 		CF30D1E51EC174B30050FB53 /* LogFolderTreesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogFolderTreesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF30D1E91EC174B30050FB53 /* LogFolderTreesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogFolderTreesUITests.m; sourceTree = "<group>"; };
 		CF30D1EB1EC174B30050FB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF30D1FF1EC409C90050FB53 /* LogFolderTreesCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogFolderTreesCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF30D2011EC409C90050FB53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CF30D2021EC409C90050FB53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CF30D2051EC409C90050FB53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF30D2071EC409C90050FB53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CF30D2081EC409C90050FB53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CF30D20A1EC409C90050FB53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF30D20D1EC409C90050FB53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF30D20F1EC409C90050FB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF30D2141EC409CA0050FB53 /* LogFolderTreesCocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogFolderTreesCocoaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF30D2181EC409CA0050FB53 /* LogFolderTreesCocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogFolderTreesCocoaTests.m; sourceTree = "<group>"; };
+		CF30D21A1EC409CA0050FB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF30D21F1EC409CA0050FB53 /* LogFolderTreesCocoaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogFolderTreesCocoaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF30D2231EC409CA0050FB53 /* LogFolderTreesCocoaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogFolderTreesCocoaUITests.m; sourceTree = "<group>"; };
+		CF30D2251EC409CA0050FB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +111,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CF30D1FC1EC409C90050FB53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF30D2111EC409CA0050FB53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF30D21C1EC409CA0050FB53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +141,9 @@
 				CF30D1C31EC174B30050FB53 /* LogFolderTrees */,
 				CF30D1DD1EC174B30050FB53 /* LogFolderTreesTests */,
 				CF30D1E81EC174B30050FB53 /* LogFolderTreesUITests */,
+				CF30D2001EC409C90050FB53 /* LogFolderTreesCocoa */,
+				CF30D2171EC409CA0050FB53 /* LogFolderTreesCocoaTests */,
+				CF30D2221EC409CA0050FB53 /* LogFolderTreesCocoaUITests */,
 				CF30D1C21EC174B30050FB53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +154,9 @@
 				CF30D1C11EC174B30050FB53 /* LogFolderTrees.app */,
 				CF30D1DA1EC174B30050FB53 /* LogFolderTreesTests.xctest */,
 				CF30D1E51EC174B30050FB53 /* LogFolderTreesUITests.xctest */,
+				CF30D1FF1EC409C90050FB53 /* LogFolderTreesCocoa.app */,
+				CF30D2141EC409CA0050FB53 /* LogFolderTreesCocoaTests.xctest */,
+				CF30D21F1EC409CA0050FB53 /* LogFolderTreesCocoaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +201,47 @@
 				CF30D1EB1EC174B30050FB53 /* Info.plist */,
 			);
 			path = LogFolderTreesUITests;
+			sourceTree = "<group>";
+		};
+		CF30D2001EC409C90050FB53 /* LogFolderTreesCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				CF30D2011EC409C90050FB53 /* AppDelegate.h */,
+				CF30D2021EC409C90050FB53 /* AppDelegate.m */,
+				CF30D2071EC409C90050FB53 /* ViewController.h */,
+				CF30D2081EC409C90050FB53 /* ViewController.m */,
+				CF30D20A1EC409C90050FB53 /* Assets.xcassets */,
+				CF30D20C1EC409C90050FB53 /* Main.storyboard */,
+				CF30D20F1EC409C90050FB53 /* Info.plist */,
+				CF30D2041EC409C90050FB53 /* Supporting Files */,
+			);
+			path = LogFolderTreesCocoa;
+			sourceTree = "<group>";
+		};
+		CF30D2041EC409C90050FB53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF30D2051EC409C90050FB53 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF30D2171EC409CA0050FB53 /* LogFolderTreesCocoaTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF30D2181EC409CA0050FB53 /* LogFolderTreesCocoaTests.m */,
+				CF30D21A1EC409CA0050FB53 /* Info.plist */,
+			);
+			path = LogFolderTreesCocoaTests;
+			sourceTree = "<group>";
+		};
+		CF30D2221EC409CA0050FB53 /* LogFolderTreesCocoaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF30D2231EC409CA0050FB53 /* LogFolderTreesCocoaUITests.m */,
+				CF30D2251EC409CA0050FB53 /* Info.plist */,
+			);
+			path = LogFolderTreesCocoaUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +300,59 @@
 			productReference = CF30D1E51EC174B30050FB53 /* LogFolderTreesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CF30D1FE1EC409C90050FB53 /* LogFolderTreesCocoa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF30D22C1EC409CA0050FB53 /* Build configuration list for PBXNativeTarget "LogFolderTreesCocoa" */;
+			buildPhases = (
+				CF30D1FB1EC409C90050FB53 /* Sources */,
+				CF30D1FC1EC409C90050FB53 /* Frameworks */,
+				CF30D1FD1EC409C90050FB53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogFolderTreesCocoa;
+			productName = LogFolderTreesCocoa;
+			productReference = CF30D1FF1EC409C90050FB53 /* LogFolderTreesCocoa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF30D2131EC409CA0050FB53 /* LogFolderTreesCocoaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF30D22D1EC409CA0050FB53 /* Build configuration list for PBXNativeTarget "LogFolderTreesCocoaTests" */;
+			buildPhases = (
+				CF30D2101EC409CA0050FB53 /* Sources */,
+				CF30D2111EC409CA0050FB53 /* Frameworks */,
+				CF30D2121EC409CA0050FB53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF30D2161EC409CA0050FB53 /* PBXTargetDependency */,
+			);
+			name = LogFolderTreesCocoaTests;
+			productName = LogFolderTreesCocoaTests;
+			productReference = CF30D2141EC409CA0050FB53 /* LogFolderTreesCocoaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF30D21E1EC409CA0050FB53 /* LogFolderTreesCocoaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF30D22E1EC409CA0050FB53 /* Build configuration list for PBXNativeTarget "LogFolderTreesCocoaUITests" */;
+			buildPhases = (
+				CF30D21B1EC409CA0050FB53 /* Sources */,
+				CF30D21C1EC409CA0050FB53 /* Frameworks */,
+				CF30D21D1EC409CA0050FB53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF30D2211EC409CA0050FB53 /* PBXTargetDependency */,
+			);
+			name = LogFolderTreesCocoaUITests;
+			productName = LogFolderTreesCocoaUITests;
+			productReference = CF30D21F1EC409CA0050FB53 /* LogFolderTreesCocoaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +379,23 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = CF30D1C01EC174B30050FB53;
 					};
+					CF30D1FE1EC409C90050FB53 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = T5EW9858SB;
+						ProvisioningStyle = Automatic;
+					};
+					CF30D2131EC409CA0050FB53 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = T5EW9858SB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CF30D1FE1EC409C90050FB53;
+					};
+					CF30D21E1EC409CA0050FB53 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = T5EW9858SB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CF30D1FE1EC409C90050FB53;
+					};
 				};
 			};
 			buildConfigurationList = CF30D1BC1EC174B30050FB53 /* Build configuration list for PBXProject "LogFolderTrees" */;
@@ -240,6 +414,9 @@
 				CF30D1C01EC174B30050FB53 /* LogFolderTrees */,
 				CF30D1D91EC174B30050FB53 /* LogFolderTreesTests */,
 				CF30D1E41EC174B30050FB53 /* LogFolderTreesUITests */,
+				CF30D1FE1EC409C90050FB53 /* LogFolderTreesCocoa */,
+				CF30D2131EC409CA0050FB53 /* LogFolderTreesCocoaTests */,
+				CF30D21E1EC409CA0050FB53 /* LogFolderTreesCocoaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +440,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CF30D1E31EC174B30050FB53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF30D1FD1EC409C90050FB53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF30D20B1EC409C90050FB53 /* Assets.xcassets in Resources */,
+				CF30D20E1EC409C90050FB53 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF30D2121EC409CA0050FB53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF30D21D1EC409CA0050FB53 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,6 +498,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CF30D1FB1EC409C90050FB53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF30D2091EC409C90050FB53 /* ViewController.m in Sources */,
+				CF30D2061EC409C90050FB53 /* main.m in Sources */,
+				CF30D2031EC409C90050FB53 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF30D2101EC409CA0050FB53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF30D2191EC409CA0050FB53 /* LogFolderTreesCocoaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF30D21B1EC409CA0050FB53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF30D2241EC409CA0050FB53 /* LogFolderTreesCocoaUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -310,6 +536,16 @@
 			isa = PBXTargetDependency;
 			target = CF30D1C01EC174B30050FB53 /* LogFolderTrees */;
 			targetProxy = CF30D1E61EC174B30050FB53 /* PBXContainerItemProxy */;
+		};
+		CF30D2161EC409CA0050FB53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF30D1FE1EC409C90050FB53 /* LogFolderTreesCocoa */;
+			targetProxy = CF30D2151EC409CA0050FB53 /* PBXContainerItemProxy */;
+		};
+		CF30D2211EC409CA0050FB53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF30D1FE1EC409C90050FB53 /* LogFolderTreesCocoa */;
+			targetProxy = CF30D2201EC409CA0050FB53 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -328,6 +564,14 @@
 				CF30D1D31EC174B30050FB53 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CF30D20C1EC409C90050FB53 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF30D20D1EC409C90050FB53 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -429,6 +673,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5EW9858SB;
 				INFOPLIST_FILE = LogFolderTrees/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.LogFolderTrees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5EW9858SB;
 				INFOPLIST_FILE = LogFolderTrees/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.LogFolderTrees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -497,6 +743,104 @@
 			};
 			name = Release;
 		};
+		CF30D2261EC409CA0050FB53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T5EW9858SB;
+				INFOPLIST_FILE = LogFolderTreesCocoa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.LogFolderTreesCocoa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CF30D2271EC409CA0050FB53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T5EW9858SB;
+				INFOPLIST_FILE = LogFolderTreesCocoa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.LogFolderTreesCocoa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CF30D2281EC409CA0050FB53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T5EW9858SB;
+				INFOPLIST_FILE = LogFolderTreesCocoaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.LogFolderTreesCocoaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogFolderTreesCocoa.app/Contents/MacOS/LogFolderTreesCocoa";
+			};
+			name = Debug;
+		};
+		CF30D2291EC409CA0050FB53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T5EW9858SB;
+				INFOPLIST_FILE = LogFolderTreesCocoaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.LogFolderTreesCocoaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogFolderTreesCocoa.app/Contents/MacOS/LogFolderTreesCocoa";
+			};
+			name = Release;
+		};
+		CF30D22A1EC409CA0050FB53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T5EW9858SB;
+				INFOPLIST_FILE = LogFolderTreesCocoaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.LogFolderTreesCocoaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = LogFolderTreesCocoa;
+			};
+			name = Debug;
+		};
+		CF30D22B1EC409CA0050FB53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = T5EW9858SB;
+				INFOPLIST_FILE = LogFolderTreesCocoaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.LogFolderTreesCocoaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = LogFolderTreesCocoa;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +860,7 @@
 				CF30D1F01EC174B30050FB53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF30D1F11EC174B30050FB53 /* Build configuration list for PBXNativeTarget "LogFolderTreesTests" */ = {
 			isa = XCConfigurationList;
@@ -524,12 +869,38 @@
 				CF30D1F31EC174B30050FB53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF30D1F41EC174B30050FB53 /* Build configuration list for PBXNativeTarget "LogFolderTreesUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF30D1F51EC174B30050FB53 /* Debug */,
 				CF30D1F61EC174B30050FB53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF30D22C1EC409CA0050FB53 /* Build configuration list for PBXNativeTarget "LogFolderTreesCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF30D2261EC409CA0050FB53 /* Debug */,
+				CF30D2271EC409CA0050FB53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF30D22D1EC409CA0050FB53 /* Build configuration list for PBXNativeTarget "LogFolderTreesCocoaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF30D2281EC409CA0050FB53 /* Debug */,
+				CF30D2291EC409CA0050FB53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF30D22E1EC409CA0050FB53 /* Build configuration list for PBXNativeTarget "LogFolderTreesCocoaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF30D22A1EC409CA0050FB53 /* Debug */,
+				CF30D22B1EC409CA0050FB53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

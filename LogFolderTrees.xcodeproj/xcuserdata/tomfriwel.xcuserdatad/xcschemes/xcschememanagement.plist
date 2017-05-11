@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>LogFolderTreesCocoa.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,21 @@
 			<true/>
 		</dict>
 		<key>CF30D1E41EC174B30050FB53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF30D1FE1EC409C90050FB53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF30D2131EC409CA0050FB53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF30D21E1EC409CA0050FB53</key>
 		<dict>
 			<key>primary</key>
 			<true/>
