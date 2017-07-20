@@ -19,16 +19,15 @@
 @implementation Tree
 
 
-+(NSArray *)getAllFilesInFolder:(NSURL *)folderURL {
++(NSDictionary *)getAllFilesInFolder:(NSURL *)folderURL {
     static int level = 0;
-    NSMutableArray *res = [[NSMutableArray alloc] init];
     
-    NSMutableDictionary *trees = [[NSMutableDictionary alloc] init];
+    NSMutableArray *files = [[NSMutableArray alloc] init];
     NSMutableDictionary *currentTree = [[NSMutableDictionary alloc] init];
     
     NSString *folderName = [folderURL lastPathComponent];
     
-    [res addObject:folderName];
+//    [currentTree setObject:folderName forKey:@"folder"];
     
     NSArray *contentOfMyFolder = [[NSFileManager defaultManager]
                                     contentsOfDirectoryAtURL:folderURL
@@ -40,22 +39,27 @@
                                     error:nil
                                   ];
     NSInteger count = contentOfMyFolder.count;
+    
     for (NSURL *item in contentOfMyFolder) {
         NSString *path = [item path];
         BOOL isDir;
         if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir]) {
+            NSString *name = [item lastPathComponent];
+            
             if (isDir) {
-                [res addObjectsFromArray:[self getAllFilesInFolder:item]];
+                NSDictionary *tempFolderInfo = [self getAllFilesInFolder:item];
+                [files addObject:tempFolderInfo];
             } else {
-                [res addObject:[item lastPathComponent]];
+                [files addObject:name];
             }
         } else {
         }
     }
     level++;
     
-    NSLog(@"level:%d, %@", level, res);
-    return res;
+    [currentTree setObject:files forKey:folderName];
+    
+    return currentTree;
 }
 
 //获取文件夹下所有files

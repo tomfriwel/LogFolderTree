@@ -11,7 +11,7 @@
 @interface Tree : NSObject
 
 //递归遍历文件夹path, 获取文件夹下所有files
-+(NSArray *)getAllFilesInFolder:(NSURL *)folderURL;
++(NSDictionary *)getAllFilesInFolder:(NSURL *)folderURL;
 
 //获取文件夹下所有files
 +(NSArray *)getFilesInFolder:(NSURL *)folderURL;

@@ -20,6 +20,7 @@
 		CF30D20E1EC409C90050FB53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF30D20C1EC409C90050FB53 /* Main.storyboard */; };
 		CF864F841EC5BC2F007B9570 /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = CF864F831EC5BC2F007B9570 /* Tree.m */; };
 		CF864F881EC5BD67007B9570 /* testFolder in Resources */ = {isa = PBXBuildFile; fileRef = CF864F871EC5BD67007B9570 /* testFolder */; };
+		CFC6ED061F20B77E00CA808A /* NSString+Repeat.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6ED051F20B77E00CA808A /* NSString+Repeat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		CF864F821EC5BC2F007B9570 /* Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
 		CF864F831EC5BC2F007B9570 /* Tree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tree.m; sourceTree = "<group>"; };
 		CF864F871EC5BD67007B9570 /* testFolder */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testFolder; sourceTree = "<group>"; };
+		CFC6ED041F20B77E00CA808A /* NSString+Repeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Repeat.h"; sourceTree = "<group>"; };
+		CFC6ED051F20B77E00CA808A /* NSString+Repeat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Repeat.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				CF30D1D21EC174B30050FB53 /* LaunchScreen.storyboard */,
 				CF30D1D51EC174B30050FB53 /* Info.plist */,
 				CF30D1C41EC174B30050FB53 /* Supporting Files */,
+				CFC6ED041F20B77E00CA808A /* NSString+Repeat.h */,
+				CFC6ED051F20B77E00CA808A /* NSString+Repeat.m */,
 			);
 			path = LogFolderTrees;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				CF864F841EC5BC2F007B9570 /* Tree.m in Sources */,
 				CF30D1C91EC174B30050FB53 /* AppDelegate.m in Sources */,
 				CF30D1C61EC174B30050FB53 /* main.m in Sources */,
+				CFC6ED061F20B77E00CA808A /* NSString+Repeat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
