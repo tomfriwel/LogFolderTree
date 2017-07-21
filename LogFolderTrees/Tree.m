@@ -60,17 +60,31 @@
         for (NSString *key in folderInfo) {
             if (isEndNode) {
                 NSLog(@"%@%@%@", prefix, @"└── ", key);
+                
+                NSString *temp = [NSString stringWithFormat:@"%@%@%@", prefix, @"└── ", key];
+                
+                result = [result stringByAppendingString:temp];
+                result = [result stringByAppendingString:@"\n"];
             }
             else {
                 NSLog(@"%@%@%@", prefix, @"├── ", key);
+                
+                NSString *temp = [NSString stringWithFormat:@"%@%@%@", prefix, @"├── ", key];
+                
+                result = [result stringByAppendingString:temp];
+                result = [result stringByAppendingString:@"\n"];
             }
             id item = folderInfo[key];
             
             if (isEndNode) {
-                [self log:item level:level+1 isEndNode:NO prefix:[NSString stringWithFormat:@"%@    ", prefix]];
+                NSString *temp = [self log:item level:level+1 isEndNode:NO prefix:[NSString stringWithFormat:@"%@    ", prefix]];
+                
+                result = [result stringByAppendingString:temp];
             }
             else {
-                [self log:item level:level+1 isEndNode:NO prefix:[NSString stringWithFormat:@"%@│   ", prefix]];
+                NSString *temp = [self log:item level:level+1 isEndNode:NO prefix:[NSString stringWithFormat:@"%@│   ", prefix]];
+                
+                result = [result stringByAppendingString:temp];
             }
         }
     }
@@ -79,30 +93,46 @@
         for (NSString *item in folderInfo) {
             if ([item isKindOfClass:[NSDictionary class]]) {
                 if (i<[folderInfo count]-1) {
-                    [self log:item level:level isEndNode:NO prefix:prefix];
+                    NSString *temp = [self log:item level:level isEndNode:NO prefix:prefix];
+                    
+                    result = [result stringByAppendingString:temp];
                 }
                 else {
-                    [self log:item level:level isEndNode:YES prefix:prefix];
+                    NSString *temp = [self log:item level:level isEndNode:YES prefix:prefix];
+                    
+                    result = [result stringByAppendingString:temp];
                 }
             }
             else if([item isKindOfClass:[NSString class]]) {
                 if (i<[folderInfo count]-1) {
                     NSLog(@"%@%@%@", prefix, @"├── ", item);
+                    
+                    NSString *temp = [NSString stringWithFormat:@"%@%@%@", prefix, @"├── ", item];
+                    
+                    result = [result stringByAppendingString:temp];
+                    result = [result stringByAppendingString:@"\n"];
                 }
                 else {
                     NSLog(@"%@%@%@", prefix, @"└── ", item);
+                    
+                    NSString *temp = [NSString stringWithFormat:@"%@%@%@", prefix, @"└── ", item];
+                    
+                    result = [result stringByAppendingString:temp];
+                    result = [result stringByAppendingString:@"\n"];
                 }
             }
             i++;
         }
     }
+//    NSLog(@"\n%@", result);
     
     return result;
 }
 
 +(void)logTree:(NSURL *)url {
     NSDictionary *res = [Tree getAllFilesInFolder:url];
-    [self log:res level:0 isEndNode:YES prefix:@""];
+    NSString *treeString = [self log:res level:0 isEndNode:YES prefix:@""];
+    NSLog(@"\n%@", treeString);
 }
 
 //+(NSString *)convertToJsonString:(id)json {
