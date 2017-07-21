@@ -42,31 +42,72 @@
     NSLog(@"%@", res);
     NSLog(@"%@", json);
     
-    [ViewController toString:res level:0];
+    [ViewController toString:res level:0 isEndNode:YES];
     
-    DLog(@"%@", @"testFolder/");
-    DLog(@"%@", @"├── test 2.txt");
-    DLog(@"%@", @"├── test 3.txt");
-    DLog(@"%@", @"├── test.txt");
-    DLog(@"%@", @"└── testChildFolder");
-    DLog(@"%@", @"    ├── test 2.txt");
-    DLog(@"%@", @"    └── test 3.txt");
+//    DLog(@"%@", @"testFolder/");
+//    DLog(@"%@", @"├── test 2.txt");
+//    DLog(@"%@", @"├── test 3.txt");
+//    DLog(@"%@", @"├── test.txt");
+//    DLog(@"%@", @"└── testChildFolder");
+//    DLog(@"%@", @"    ├── test 2.txt");
+//    DLog(@"%@", @"    └── test 3.txt");
 }
+//static int isFirst = 1;
 
-+(NSString *)toString:(NSDictionary *)folderInfo level:(NSInteger)level {
++(NSString *)toString:(id)folderInfo level:(NSInteger)level isEndNode:(BOOL)isEndNode {
     NSString *result = @"";
     NSString *pre = [@" " repeatTimes:level*4];
     
-    for (NSString *key in folderInfo) {
-        NSLog(@"key:%@", key);
-        
-        id item = folderInfo[key];
-        
-        if ([item isKindOfClass:[NSDictionary class]]) {
-            [ViewController toString:item level:level+1];
+    if ([folderInfo isKindOfClass:[NSDictionary class]]) {
+        for (NSString *key in folderInfo) {
+//            if (isFirst) {
+//                NSLog(@"%@%@%@", pre, @"─── ", key);
+//                isFirst = 0;
+//            }
+//            else {
+                if (isEndNode) {
+                    NSLog(@"%@%@%@", pre, @"└── ", key);
+                }
+                else {
+                    NSLog(@"%@%@%@", pre, @"├── ", key);
+                }
+//            }
+            id item = folderInfo[key];
+            
+            if ([item isKindOfClass:[NSDictionary class]]) {
+                [ViewController toString:item level:level isEndNode:NO];
+            }
+            else if([item isKindOfClass:[NSArray class]]) {
+                [ViewController toString:item level:level+1 isEndNode:NO];
+            }
+            else if([item isKindOfClass:[NSString class]]) {
+                NSLog(@"%@%@%@", pre, @"└── ", item);
+            }
         }
-        else if([item isKindOfClass:[NSArray class]]) {
-            NSLog(@"%@", key);
+    }
+    else if ([folderInfo isKindOfClass:[NSArray class]]) {
+        NSInteger i = 0;
+        for (NSString *item in folderInfo) {
+            if ([item isKindOfClass:[NSDictionary class]]) {
+                if (i<[folderInfo count]-1) {
+                    [ViewController toString:item level:level isEndNode:NO];
+                }
+                else {
+                    [ViewController toString:item level:level isEndNode:YES];
+                }
+            }
+            else if([item isKindOfClass:[NSArray class]]) {
+                [ViewController toString:item level:level+1 isEndNode:NO];
+            }
+            else if([item isKindOfClass:[NSString class]]) {
+                if (i<[folderInfo count]-1) {
+                    NSLog(@"%@%@%@", pre, @"├── ", item);
+                }
+                else {
+                    NSLog(@"%@%@%@", pre, @"└── ", item);
+                }
+            }
+            i++;
         }
     }
     
