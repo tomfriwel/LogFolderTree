@@ -18,16 +18,11 @@
 
 @implementation Tree
 
-
 +(NSDictionary *)getAllFilesInFolder:(NSURL *)folderURL {
-    static int level = 0;
-    
     NSMutableArray *files = [[NSMutableArray alloc] init];
     NSMutableDictionary *currentTree = [[NSMutableDictionary alloc] init];
     
     NSString *folderName = [folderURL lastPathComponent];
-    
-//    [currentTree setObject:folderName forKey:@"folder"];
     
     NSArray *contentOfMyFolder = [[NSFileManager defaultManager]
                                     contentsOfDirectoryAtURL:folderURL
@@ -38,7 +33,6 @@
                                     options:NSDirectoryEnumerationSkipsHiddenFiles
                                     error:nil
                                   ];
-    NSInteger count = contentOfMyFolder.count;
     
     for (NSURL *item in contentOfMyFolder) {
         NSString *path = [item path];
@@ -52,39 +46,76 @@
             } else {
                 [files addObject:name];
             }
-        } else {
         }
     }
-    level++;
-    
     [currentTree setObject:files forKey:folderName];
     
     return currentTree;
 }
 
-//获取文件夹下所有files
-+(NSArray *)getFilesInFolder:(NSURL *)folderURL {
-    //    NSLog(@"getAllFilesInFolder");
-    NSMutableArray *res = [[NSMutableArray alloc] init];
++(NSString *)log:(id)folderInfo level:(NSInteger)level isEndNode:(BOOL)isEndNode prefix:(NSString *)prefix {
+    NSString *result = @"";
     
-    NSArray *contentOfMyFolder = [[NSFileManager defaultManager]
-                                  contentsOfDirectoryAtURL:folderURL
-                                  includingPropertiesForKeys:@[NSURLContentModificationDateKey, NSURLLocalizedNameKey]
-                                  options:NSDirectoryEnumerationSkipsHiddenFiles
-                                  error:nil];
-    for (NSURL *item in contentOfMyFolder) {
-        NSString *path = [item path];
-        BOOL isDir;
-        if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir]) {
-            if (isDir) {
-                continue;
-            } else {
-                [res addObject:item];
+    if ([folderInfo isKindOfClass:[NSDictionary class]]) {
+        for (NSString *key in folderInfo) {
+            if (isEndNode) {
+                NSLog(@"%@%@%@", prefix, @"└── ", key);
             }
-        } else {
+            else {
+                NSLog(@"%@%@%@", prefix, @"├── ", key);
+            }
+            id item = folderInfo[key];
+            
+            if (isEndNode) {
+                [self log:item level:level+1 isEndNode:NO prefix:[NSString stringWithFormat:@"%@    ", prefix]];
+            }
+            else {
+                [self log:item level:level+1 isEndNode:NO prefix:[NSString stringWithFormat:@"%@│   ", prefix]];
+            }
         }
     }
-    return res;
+    else if ([folderInfo isKindOfClass:[NSArray class]]) {
+        NSInteger i = 0;
+        for (NSString *item in folderInfo) {
+            if ([item isKindOfClass:[NSDictionary class]]) {
+                if (i<[folderInfo count]-1) {
+                    [self log:item level:level isEndNode:NO prefix:prefix];
+                }
+                else {
+                    [self log:item level:level isEndNode:YES prefix:prefix];
+                }
+            }
+            else if([item isKindOfClass:[NSString class]]) {
+                if (i<[folderInfo count]-1) {
+                    NSLog(@"%@%@%@", prefix, @"├── ", item);
+                }
+                else {
+                    NSLog(@"%@%@%@", prefix, @"└── ", item);
+                }
+            }
+            i++;
+        }
+    }
+    
+    return result;
 }
+
++(void)logTree:(NSURL *)url {
+    NSDictionary *res = [Tree getAllFilesInFolder:url];
+    [self log:res level:0 isEndNode:YES prefix:@""];
+}
+
+//+(NSString *)convertToJsonString:(id)json {
+//    NSString *jsonString = @"";
+//    NSError *error;
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:(NSJSONWritingOptions)NSJSONWritingPrettyPrinted error:&error];
+//    
+//    if (!jsonData) {
+//        NSLog(@"convertToJsonString error:%@", error.localizedDescription);
+//    } else {
+//        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//    }
+//    return jsonString;
+//}
 
 @end
