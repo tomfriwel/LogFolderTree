@@ -21,6 +21,7 @@
 		CF864F841EC5BC2F007B9570 /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = CF864F831EC5BC2F007B9570 /* Tree.m */; };
 		CF864F881EC5BD67007B9570 /* testFolder in Resources */ = {isa = PBXBuildFile; fileRef = CF864F871EC5BD67007B9570 /* testFolder */; };
 		CFC6ED061F20B77E00CA808A /* NSString+Repeat.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6ED051F20B77E00CA808A /* NSString+Repeat.m */; };
+		CFC6ED071F21B03900CA808A /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = CF864F831EC5BC2F007B9570 /* Tree.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -272,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF30D2091EC409C90050FB53 /* ViewController.m in Sources */,
+				CFC6ED071F21B03900CA808A /* Tree.m in Sources */,
 				CF30D2061EC409C90050FB53 /* main.m in Sources */,
 				CF30D2031EC409C90050FB53 /* AppDelegate.m in Sources */,
 			);
