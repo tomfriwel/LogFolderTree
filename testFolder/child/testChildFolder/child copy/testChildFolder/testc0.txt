@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    </head>
+    <style>
+    </style>
+    <body>
+        <div id="selectable" onclick="selectText('selectable')">http://example.com/page.htm</div>
+    </body>
+</html>
+<script type="text/javascript">
+    function selectText(containerid) {
+        if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select();
+        } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(containerid));
+            window.getSelection().addRange(range);
+        }
+    }
+</script>
